@@ -1,0 +1,170 @@
+<!doctype html>
+<html class="no-js" lang="zh_hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Linux几大主要安装模式整理</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/default-css.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+		<p class="browserupgrade">您的浏览器 <strong>太旧啦！</strong> 详情参考“关于我的博客”一栏</p>
+	<![endif]-->
+<!-- preloader area start -->
+<!---<div id="preloader">
+	<div class="loader"></div>
+</div>--->
+<!-- prealoader area end -->
+<!-- header area start -->
+<header>
+	<div class="header-area tpheader-two">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../assets/images/icon/logo-white.png" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 d-none d-lg-block">
+					<div class="main-menu">
+						<nav id="nav_mobile_menu">
+							<ul id="navigation">
+								<li class="active">
+									<a href="../index.html">主页</a>
+								</li>
+								<li>
+									<a href="../categories/about.html">关于我的博客</a>
+								</li>
+								<li>
+									<a href="../categories/music.html">音乐推荐</a>
+								</li>
+								<li>
+									<a href="../categories/games.html">游戏</a>
+								</li>
+								<li>
+									<a href="../categories/linux.html">Linux使用心得</a>
+								</li>
+								<li>
+									<a href="../categories/web.html">web开发笔记</a>
+								</li>
+								<li>
+									<a href="../categories/feeling.html">随想</a>
+								</li>
+								<li>
+									<a href="../categories/hardware.html">硬件拾遗</a>
+								</li>
+								<li>
+									<a href="../categories/software.html">好玩的软件</a>
+								</li>
+								<li>
+									<a href="../categories/log.html">开发日志</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-12 d-block d-lg-none">
+					<div id="mobile_menu"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="abt3-area ptb--100" id="about">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-lg-7">
+				<div class="abt3-content">
+                    <span><a href="../categories/linux.html">回到刚才的页面</a></span>
+					<h2>Linux几大主要安装模式整理</h2>
+					<font size="5">1.Debian系列：DPKG（Debian Package Management System)</font><br>
+					<p>这种系统的程序后缀为.deb，使用DPKG作为 Debian Linux 家族的基础包管理系统。dpkg的前端工具有常用的APT（高级打包工具），Aptitude 包管理器和新立得包管理工具。dpkg本身是一个底层的工具。上层的工具，如APT，被用于从远程获取软件包以及处理复杂的软件包关系。</p>
+                    <p>属于这个系列的发行版有Debian,Ubuntu/Xubuntu/Lubuntu,POP!OS,LInux Mint,MXLinux,Deepin等。常用命令如下：</p>
+                    <p><code>apt list --installed #列出所有已经安装的程序</code></p>
+                    <p><code>apt-get install /package name/ #安装</code></p>
+                    <p><code>apt-get --reinstall install /packagename/ #重新安装</code></p>
+                    <p><code>apt-get -f install #修复依赖关系</code></p>
+                    <p><code>apt-get source /package name/ #下载程序源代码</code></p>
+                    <p><code>apt-get remove /PackageName/ #卸载程序。保留配置文件。</code></p>
+                    <p><code>apt-get --purge remove /PackageName/ #上述两者都卸载</code></p>
+                    <p><code>apt-get purge /PackageName/ #卸载上述的同时把需要的依赖程序也删除</code></p>
+					<font size="5">2.Red Hat系列：RPM（Red Hat Package Management</font><br>
+					<p>这种系统的程序后缀为.rpm，使用rpm作为Red Hat Linux家族的基础包管理器系统。rpm的前端工具有常用的yum黄狗更新器和DNF（yum的改版）。本人没有用过红帽系的发行版，因此就不列出啦，感兴趣的小伙伴可以自己搜寻。</p>
+                    <font size="5">3.Arch系列：Pacman</font>
+                    <p>Pacman是Arch系的特色包管理器，常用命令如下：</p>
+                    <p><code>pacman -S /package_name/ #安装软件</code></p>
+                    <p><code>pacman -R /package_name/ #卸载程序。保留配置文件。</code></p>
+                    <p><code>pacman -Rs /package_name/ #上述两者都卸载</code></p>
+                    <p><code>pacman -Syu #升级系统和同步仓库数据</code></p>
+                    <font size="5">4.Flatpak</font>
+                    <p>Flatpak是2016年由同名团队开发的一种包管理器，具有红帽公司的背景。要想使用flatpak，您必须在您的发行版里安装flatpak。</p>
+					<p>在Debian系中打开终端，输入：</p>
+					<p><code>sudo apt-get install flatpak</code></p>
+					<p>其他系列自行搜索，部分发行版自带flatpak。以下是它的用法：</p>
+					<p><code>flatpak update <i>appID</i> #更新应用，后面参数不加代表更新所有应用</code></p>
+					<p><code>flatpak remote-add <i>name location(URL) #添加一个远程仓库</i></code></p>
+					<p><code>flatpak remote-delete <i>name</i> #删除仓库</code></p>
+					<p><code>flatpak search <i>APPname</i> #在所有库中查询某个程序的名字</code></p>
+					<p><code>flatpak install <i>repository appID</i> #安装指定库里面的程序，自flatpak 1.2以前程序必须为ID名，1.2后输入程序原名会自动搜索库里的匹配程序包并下载安装。此外，您也可以将本地的flatpak安装包拖到终端中“flatpak install”后安装。</code></p>
+					<p><code>flatpak run <i>appID</i> #运行某个程序，程序为ID名</code></p>
+					<p><code>flatpak uninstall <i>appID</i> #卸载某个程序</code></p>
+                    <font size="5">5.Snap</font>
+                    <p>Snap是由canocical公司（ubuntu的赞助商）开发的包管理系统，自ubuntu 16.04LTS版本开始自带。不过，该举动反响并不太好，据称会破坏您的依赖关系。除了基于ubuntu的系统，您必须在您的OS上安装snap才可以使用它。</p>
+                    <font size="5">6.Appimage</font>
+                    <p>严格来说，它只是一种可执行文件的格式，类似于windows的绿色版。该文件即点即用，非常方便。要想把他加入程序菜单，可使用AppimageLaucher软件</p>
+                    <font size="5">7.其他</font>
+                    <p>OpenSUSE使用zypper管理器，gentoo使用portage管理器，slackware使用slpkg管理器</p>
+                    <p>除此之外，部分软件会要求你运行.sh或.bundle脚本以安装软件。</p>
+				</div>
+			</div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                <p>***</p>
+                <p>2022.12.03 今日音乐：</p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="https://music.163.com/outchain/player?type=2&id=1451345379&auto=0&height=66"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footer-area ptb--50">
+	<div class="container">
+		<div class="footer-content">
+			<p>SINCE 2022 1.1 Cylinder</p>
+		</div>
+	</div>
+</div>
+<!-- jquery latest version -->
+<script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- others plugins -->
+<script src="../assets/js/jquery.slicknav.min.js"></script>
+<script src="../assets/js/counterup.min.js"></script>
+<script src="../assets/js/waypoints.js"></script>
+<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/isotope.pkgd.min.js"></script>
+<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/countdown.js"></script>
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/jquery.zoomslider.min.js"></script>
+<script src="../assets/js/jquery.firefly.js"></script>
+<script src="../assets/js/scripts.js"></script>
+</body>
+</body>
+</html>

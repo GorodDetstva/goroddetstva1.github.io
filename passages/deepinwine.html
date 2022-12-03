@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js" lang="zh_hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>基于Deepin—WINE的Linux软件推荐</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/default-css.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+		<p class="browserupgrade">您的浏览器 <strong>太旧啦！</strong> 详情参考“关于我的博客”一栏</p>
+	<![endif]-->
+<!-- preloader area start -->
+<!---<div id="preloader">
+	<div class="loader"></div>
+</div>--->
+<!-- prealoader area end -->
+<!-- header area start -->
+<header>
+	<div class="header-area tpheader-two">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../assets/images/icon/logo-white.png" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 d-none d-lg-block">
+					<div class="main-menu">
+						<nav id="nav_mobile_menu">
+							<ul id="navigation">
+								<li class="active">
+									<a href="../index.html">主页</a>
+								</li>
+								<li>
+									<a href="../categories/about.html">关于我的博客</a>
+								</li>
+								<li>
+									<a href="../categories/music.html">音乐推荐</a>
+								</li>
+								<li>
+									<a href="../categories/games.html">游戏</a>
+								</li>
+								<li>
+									<a href="../categories/linux.html">Linux使用心得</a>
+								</li>
+								<li>
+									<a href="../categories/web.html">web开发笔记</a>
+								</li>
+								<li>
+									<a href="../categories/feeling.html">随想</a>
+								</li>
+								<li>
+									<a href="../categories/hardware.html">硬件拾遗</a>
+								</li>
+								<li>
+									<a href="../categories/software.html">好玩的软件</a>
+								</li>
+								<li>
+									<a href="../categories/log.html">开发日志</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-12 d-block d-lg-none">
+					<div id="mobile_menu"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="abt3-area ptb--100" id="about">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-lg-7">
+				<div class="abt3-content">
+                    <span><a href="../categories/linux.html">回到刚才的页面</a></span>
+					<h2>基于Deepin-Wine的Linux软件推荐</h2>
+					<font size="5">1.安装</font><br>
+					<p>首先，您必须在终端中输入如下指令，以添加DEEPIN-WINE的仓库。</p>
+                    <p><code>wget -O- https://deepin-wine.i-m.dev/setup.sh | sh</code></p>
+					<p>自此以后，你可以像对待普通的软件包一样，使用apt-get系列命令进行各种应用安装、更新和卸载清理了。</p>
+					<font size="5">2.常用的软件包名</font><br>
+					<p>以下列举了一些常用的软件包名。如要安装，您只需和其他软件一样，输入：</p>
+					<p><code>sudo apt-get install xxx</code></p>
+					<table border="5">
+						<tr>
+							<th>软件名称</th>
+							<th>包名</th>
+						</tr>
+						<tr>
+							<td>微信</td>
+							<td>com.qq.weixin.deepin</td>
+						</tr>
+						<tr>
+							<td>QQ</td>
+							<td>com.qq.im.deepin</td>
+						</tr>
+						<tr>
+							<td>TIM QQ</td>
+							<td>com.qq.office.deepin</td>
+						</tr>
+						<tr>
+							<td>央视影音</td>
+							<td>com.cbox.deepin</td>
+						</tr>
+						<tr>
+							<td>酷狗音乐</td>
+							<td>com.kugou.deepin</td>
+						</tr>
+						<tr>
+							<td>格式工厂</td>
+							<td>com.pcfreetime.formatfactory.deepin</td>
+						</tr>
+					</table>
+					<p>全部列表可参见https://deepin-wine.i-m.dev/</p>
+					<font size="5">3.常见问题</font><br>
+					<p><b>1.图标问题</b></p>
+					<p>您需要重启电脑才能在程序坞（我也不知道那叫啥，反正在GNOME桌面就是那九个点）里看到。</p>
+					<p><b>2.微信启动不起来</b></p>
+					<p>其实我也没解决这个问题，请参考 <a href="https://github.com/zq1997/deepin-wine/issues/310" target="_blank">这个页面</a> 予以解决</p>
+					<p><b>3.微信出现界面中文字体显示方块的问题</b></p>
+					<p>请在终端中输入：</p>
+					<p><code>sudo apt-cache search wqy 
+						fonts-wqy-microhei - Sans-serif style CJK font derived from Droid
+						fonts-wqy-zenhei - "WenQuanYi Zen Hei" A Hei-Ti Style (sans-serif) Chinese font
+						xfonts-wqy - WenQuanYi Bitmap Song CJK font for X</code></p>
+					<p>然后在终端中输入：</p>
+					<p><code>sudo apt install fonts-wqy-microhei</code></p>
+					<p><b>4.微信等无法正常收发图片</b></p>
+					<p>在终端中输入：</p>
+					<p><code>sudo apt install libjpeg62:i386</code></p>
+					<p><b>如有其他问题，请参考官方GITHUB的issues</b></p>
+				</div>
+			</div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+				<p>******</p>
+				<font size="5">本页面引用自<a href="https://deepin-wine.i-m.dev/">这个页面</a>。其GITHUB地址在<a href="https://github.com/zq1997/deepin-wine">这里。</a></font>
+                <p>******</p>
+				<font size="5">仓库中软件包的下载地址会被301重定向到deepin的官方仓库（或者镜像）中去，其版权由 deepin 所有。</font>
+				<p>******</p>
+                <p>2022.12.03 今日音乐：</p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="https://music.163.com/outchain/player?type=2&id=1451345379&auto=0&height=66"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footer-area ptb--50">
+	<div class="container">
+		<div class="footer-content">
+			<p>SINCE 2022 1.1 Cylinder</p>
+		</div>
+	</div>
+</div>
+<!-- jquery latest version -->
+<script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- others plugins -->
+<script src="../assets/js/jquery.slicknav.min.js"></script>
+<script src="../assets/js/counterup.min.js"></script>
+<script src="../assets/js/waypoints.js"></script>
+<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/isotope.pkgd.min.js"></script>
+<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/countdown.js"></script>
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/jquery.zoomslider.min.js"></script>
+<script src="../assets/js/jquery.firefly.js"></script>
+<script src="../assets/js/scripts.js"></script>
+</body>
+</body>
+</html>

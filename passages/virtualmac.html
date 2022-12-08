@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="zh_hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>在VMWare虚拟机中安装MacOS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/default-css.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+		<p class="browserupgrade">您的浏览器 <strong>太旧啦！</strong> 详情参考“关于我的博客”一栏</p>
+	<![endif]-->
+<!-- preloader area start -->
+<!---<div id="preloader">
+	<div class="loader"></div>
+</div>--->
+<!-- prealoader area end -->
+<!-- header area start -->
+<header>
+	<div class="header-area tpheader-two">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../assets/images/icon/logo-white.png" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 d-none d-lg-block">
+					<div class="main-menu">
+						<nav id="nav_mobile_menu">
+							<ul id="navigation">
+								<li class="active">
+									<a href="../index.html">主页</a>
+								</li>
+								<li>
+									<a href="../categories/about.html">关于我的博客</a>
+								</li>
+								<li>
+									<a href="../categories/music.html">音乐推荐</a>
+								</li>
+								<li>
+									<a href="../categories/games.html">游戏</a>
+								</li>
+								<li>
+									<a href="../categories/linux.html">Linux使用心得</a>
+								</li>
+								<li>
+									<a href="../categories/web.html">web开发笔记</a>
+								</li>
+								<li>
+									<a href="../categories/feeling.html">随想</a>
+								</li>
+								<li>
+									<a href="../categories/hardware.html">硬件拾遗</a>
+								</li>
+								<li>
+									<a href="../categories/software.html">好玩的软件</a>
+								</li>
+								<li>
+									<a href="../categories/log.html">开发日志</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-12 d-block d-lg-none">
+					<div id="mobile_menu"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="abt3-area ptb--100" id="about">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-lg-7">
+				<div class="abt3-content">
+                    <span><a href="../categories/software.html">回到刚才的页面</a></span>
+					<h2>在VMWare虚拟机中安装MacOS指南</h2>
+					<p>有一天博主突发奇想：我能不能装一台苹果系统的机子呢？网上一查，N卡20系之后没有驱动了......全剧终。</p>
+                    <p>不过不要着急，上帝关上了门，焊死了窗户，但总归会留下一个下水道口的:>借助VMWare工具，我们可以尝试在虚拟机中安装黑苹果。不过还是有些许可惜，实体机上已经安装了Windows和Linux,能在实体机上安装MacOS是多少计算机爱好者的梦想阿！os御三家，唯有mac不得齐全:<</p>
+                    <p>要安装虚拟机的Mac，我们必须先下载VMWare（废话）。我们<a href="https://www.vmware.com/go/getworkstation-win">从这个链接</a>下载windows版本的虚拟机软件。</p>
+                    <p>下载安装之后，我们还要下载一个补丁<a href="https://github.com/paolo-projects/unlocker/releases">点我下载</a> 版本3系列补丁适用于windows和linux的vmware的11-15版本，最新版3.0.4则适配了16版本（17版本未知）。旧版本2.0系列请自行上网搜索.最后下载<a href="https://pan.baidu.com/s/1i5Thr2P">Apple High Sierra镜像</a> 密码1t3e</p>
+                    <p>如果你是windows系统，请同时按下 win 和 R 键，输入 services.msc ，将所有Vmware服务全部关掉（所有以vmware打头的服务项），然后打开你解压好的补丁位置，选中win-install.cmd，右键以管理员身份运行，之后重启。</p>
+					<p>如果你是GNU/linux用户，请切换到你的补丁目录，右键在终端中打开（或者直接用cd命令切换），输入</p>
+                    <p><code>sudo ./lnx-install.sh</code></p>
+                    <p>然后就是配置自己的虚拟机，在选择客户机操作系统时选择apple即可。建议内存分配的稍大一些，硬盘最低50GB</p>
+                    <p>配置完虚拟机后，最重要的一步来了：</p>
+                    <p>如果你是Intel CPU 用户，请打开你配置虚拟机的目录，找到一个.vmx的文件，右键用记事本（或者以其他文本编辑器）打开，在 <code>smc.present ="0"</code>后的一行回车，输入：</p>
+                    <p><code>smc.version = "0"</code></p>
+                    <p>并在最后添加：</p>
+                    <p>
+                        <code>cpuid.1.eax = "00000000000000010000011010100101"</code>
+                    </p>
+                    <p>如果你是 AMD CPU用户，请在上述文件的末尾，用同样的方法打开VMX文件，在末尾添加：</p>
+                    <p>
+                        <code>smc.version = "0"</code><br>
+                        <code>cpuid.0.eax = "0000:0000:0000:0000:0000:0000:0000:1011"</code><br>
+                        <code>cpuid.0.ebx = "0111:0101:0110:1110:0110:0101:0100:0111"</code><br>
+                        <code>cpuid.0.ecx = "0110:1100:0110:0101:0111:0100:0110:1110"</code><br>
+                        <code>cpuid.0.edx = "0100:1001:0110:0101:0110:1110:0110:1001"</code><br>
+                        <code>cpuid.1.eax = "0000:0000:0000:0001:0000:0110:0111:0001"</code><br>
+                        <code>cpuid.1.ebx = "0000:0010:0000:0001:0000:1000:0000:0000"</code><br>
+                        <code>cpuid.1.ecx = "1000:0010:1001:1000:0010:0010:0000:0011"</code><br>
+                        <code>cpuid.1.edx = "0000:0111:1000:1011:1111:1011:1111:1111"</code><br>
+                        <code>smbios.reflectHost = "TRUE"</code><br>
+                        <code>hw.model = "MacBookPro14,3"</code><br>
+                        <code>board-id = "Mac-551B86E5744E2388"</code><br>
+                        <code>keyboard.vusb.enable = "TRUE"</code><br>
+                        <code>mouse.vusb.enable = "TRUE"</code><br>
+                    </p>
+                    <p>之后打开虚拟机，一路配置下去即可。不过当您配置磁盘时，您需要先点击顶栏实用工具-磁盘工具，选择你的硬盘并“抹掉”为MACOS格式，名称随意，之后退出磁盘工具并继续安装即可。</p>
+                    <p>最后进入系统，您需要安装它的驱动VMWare tools,在虚拟机软件中的虚拟机选项卡-可移动设备-CD/DVD（SATA），选择vmware安装目录下的darwin.iso,点击确定后桌面上出现Vmwaretools，点击安装。如果出现“系统扩展已被阻止”，则在顶栏中打开苹果logo-系统偏好设置-安全性与隐私，在允许从以下位置下载的应用中允许 VMWare tools即可。</p>
+                    <p>另外，虚拟机的mac是非常卡滴，拿来浏览网页/聊天/看书/编辑文档（推荐LIBRE OFFICE）/测试环境还算是可以的。</p>
+				</div>
+			</div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                <p>***</p>
+                <p>2022.12.08 今日音乐：</p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=3&id=2066593331&auto=0&height=66"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footer-area ptb--50">
+	<div class="container">
+		<div class="footer-content">
+			<p>SINCE 2022 2.0 Cone</p>
+		</div>
+	</div>
+</div>
+<!-- jquery latest version -->
+<script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- others plugins -->
+<script src="../assets/js/jquery.slicknav.min.js"></script>
+<script src="../assets/js/counterup.min.js"></script>
+<script src="../assets/js/waypoints.js"></script>
+<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/isotope.pkgd.min.js"></script>
+<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/countdown.js"></script>
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/jquery.zoomslider.min.js"></script>
+<script src="../assets/js/jquery.firefly.js"></script>
+<script src="../assets/js/scripts.js"></script>
+</body>
+</body>
+</html>

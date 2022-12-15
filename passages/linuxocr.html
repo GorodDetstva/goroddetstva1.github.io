@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js" lang="zh_hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>LINUX自制OCR</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/default-css.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+		<p class="browserupgrade">您的浏览器 <strong>太旧啦！</strong> 详情参考“关于我的博客”一栏</p>
+	<![endif]-->
+<!-- preloader area start -->
+<!---<div id="preloader">
+	<div class="loader"></div>
+</div>--->
+<!-- prealoader area end -->
+<!-- header area start -->
+<header>
+	<div class="header-area tpheader-two">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../assets/images/icon/logo-white.png" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 d-none d-lg-block">
+					<div class="main-menu">
+						<nav id="nav_mobile_menu">
+							<ul id="navigation">
+								<li class="active">
+									<a href="../index.html">主页</a>
+								</li>
+								<li>
+									<a href="../categories/about.html">关于我的博客</a>
+								</li>
+								<li>
+									<a href="../categories/music.html">音乐推荐</a>
+								</li>
+								<li>
+									<a href="../categories/games.html">游戏</a>
+								</li>
+								<li>
+									<a href="../categories/linux.html">Linux使用心得</a>
+								</li>
+								<li>
+									<a href="../categories/web.html">web开发笔记</a>
+								</li>
+								<li>
+									<a href="../categories/feeling.html">随想</a>
+								</li>
+								<li>
+									<a href="../categories/hardware.html">硬件拾遗</a>
+								</li>
+								<li>
+									<a href="../categories/software.html">好玩的软件</a>
+								</li>
+								<li>
+									<a href="../categories/log.html">开发日志</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-12 d-block d-lg-none">
+					<div id="mobile_menu"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="abt3-area ptb--100" id="about">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-lg-7">
+				<div class="abt3-content">
+                    <span><a href="../categories/linux.html">回到刚才的页面</a></span>
+					<h2>LINUX自制OCR</h2>
+					<p>在linux下文字识别问题一直困扰着各位用户。尽管如此，linux用户们仍然利用自己的智慧，实现了方便的文字识别功能。</p>
+                    <p>如果您对代码和脚本望而生畏，那么本文将以最通俗、最小白的方法手把手教您搭建在LINUX上的文字识别服务。</p>
+                    <p>先来梳理一下思路：在windows下我们打开一个OCR软件，点击“截图”按钮，将自己所要识别的区域用鼠标选择，放开手——软件自动将所识别的结果显示在文本框内，我们选择自己所需的复制粘贴，这就是一个差不多的OCR识别流程了。</p>
+                    <p>在linux下也没那么糟，最起码没有一些人说的——命令行原教旨主义。所有的流程大同小异，只不过你应该自己把所有的轮子造起来罢了。参考上面的步奏，我们需要：</p>
+                    <p><b>一个ocr软件、一个截图工具和一个输出平台。</b></p>
+                    <p>让我们开始吧！</p><br>
+                    <font size="5">1.安装截图工具</font><br>
+                    <p>在终端里输入：</p>
+                    <p><code>sudo apt install gnome-screenshot</code></p>
+                    <p><code>sudo apt install xclip</code></p>
+                    <p><code>sudo apt install imagemagick</code></p>
+                    <font size="5">2.安装文字识别工具</font><br>
+                    <p>在终端里输入：</p>
+                    <p><code>sudo add-apt-repository ppa:alex-p/tesseract-ocr  #添加源</code></p>
+                    <p><code>sudo apt update  #更新源</code></p>
+                    <p><code>sudo apt install tesseract-ocr</code></p>
+                    <p><i>注：Tesseract，一款由HP实验室开发，由Google维护的开源OCR（Optical Character Recognition , 光学字符识别）引擎</i></p>
+                    <font size="5">3.下载训练库</font>
+                    <p>您可以从<a href="https://github.com/tesseract-ocr/tessdata">官方网站</a>下载训练库（简体中文：chi_sim.traineddata）。如果访问困难，可以从<a href="https://axns.lanzouw.com/iEgqe0iqnlxc">这个连接</a>下载训练库，截至2022.12.15</p>
+                    <p>您也可以下载其他语言版本，如chi_tra是繁体中文数据库。另外，vert指以上到下（竖着写）的文字识别库，注意区分。</p>
+                    <p>下载完成后，把它放入/usr/share/tesseract-ocr/5/tessdata/文件夹中。如果提示没有权限,就在终端中输入：</p>
+                    <p>
+                        <code>#方法一：</code><br>
+                        <code>sudo nautilus</code><br>
+                        <code>#方法二：</code><br>
+                        <code>sudo chmod 777 /usr/share/tesseract-ocr/5/tessdata/</code><br>
+                    </p>
+                    <p>特别需要关注的是，您一定要记住您所放置的训练库的名称。</p>
+                    <font size="5">4.制作脚本</font>
+                    <p>新建.sh文件，在里面输入：</p>
+                    <p>
+                        <code>#!/bin/env bash</code><br>
+                        <code># Dependencies: tesseract-ocr imagemagick gnome-screenshot xclip</code><br>
+                        <code></code><br>
+                        <code>#Name: OCR Picture</code><br>
+                        <code>#Fuction: take a screenshot and OCR the letters in the picture</code><br>
+                        <code>#Path: /home/Username/...</code><br>
+                        <code></code><br>
+                        <code>#you can only scan one character at a time</code><br>
+                        <code>SCR="（需要自己修改）您存放这个脚本以及生成临时文件的路径"</code><br>
+                        <code></code><br>
+                        <code># take a shot what you wana to OCR to text</code><br>
+                        <code>gnome-screenshot -a -f $SCR.png</code><br>
+                        <code></code><br>
+                        <code># increase the png</code><br>
+                        <code>mogrify -modulate 100,0 -resize 400% $SCR.png </code><br>
+                        <code># should increase detection rate</code><br>
+                        <code></code><br>
+                        <code># OCR by tesseract</code><br>
+                        <code>tesseract $SCR.png $SCR &> /dev/null -l eng+chi_sim</code><br>
+                        <code>#Delete the space</code>
+                        <code>sed -i 's/[[:space:]]//g' $SCR.txt</code><br>
+                        <code># get the text and copy to clipboard</code><br>
+                        <code>cat $SCR.txt | xclip -selection clipboard</code><br>
+                        <code></code><br>
+                        <code>exit</code><br>
+                    </p>
+                    <p>需要注意的是，您需要在第九行处自己修改您存放这个脚本以及生成临时文件的路径。此外，如果您的训练库文件名有所改变或增加新的语言，记得在第19行最后更改名称。如您将简体中文变更为繁体中文，且您的繁体中文的训练库名为chi_tra,则改为eng+chi_tra即可。增加新的语言时用+连接</p>
+                    <p>对了，记得设置这个脚本为可执行或允许以程序执行。</p>
+                    <font size="5">5.添加快捷键</font>
+                    <p>（GNOME）在设置-键盘-快捷键-自定义快捷键中设置。名称和快捷键随便取，命令则填写你脚本所在的完整路径（别忘了你的脚本名称.sh）即可。</p>
+                    <font size="5">6.使用方法</font>
+                    <p>按下你设置的快捷键，选择你要的区域，截取完文字自动复制到剪贴板，就这么简单。</p>
+				</div>
+			</div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                <p>******</p><br>
+                <font size="5">本文<a href="https://jasonkayzk.github.io/2021/05/07/Linux%E4%B8%8B%E8%87%AA%E5%88%B6ocr%E8%BD%AF%E4%BB%B6/">根据这个页面加以修改而作</a></font><br>
+                <p>******</p><br>
+                <p>2022.12.15 今日音乐：</p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=5114831&auto=0&height=66"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footer-area ptb--50">
+	<div class="container">
+		<div class="footer-content">
+			<p>SINCE 2022 2.0 Cone</p>
+		</div>
+	</div>
+</div>
+<!-- jquery latest version -->
+<script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- others plugins -->
+<script src="../assets/js/jquery.slicknav.min.js"></script>
+<script src="../assets/js/counterup.min.js"></script>
+<script src="../assets/js/waypoints.js"></script>
+<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/isotope.pkgd.min.js"></script>
+<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/countdown.js"></script>
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/jquery.zoomslider.min.js"></script>
+<script src="../assets/js/jquery.firefly.js"></script>
+<script src="../assets/js/scripts.js"></script>
+</body>
+</body>
+</html>

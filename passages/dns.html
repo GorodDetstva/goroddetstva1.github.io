@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="zh_hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>浏览器无法上网的解决问题</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/default-css.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+		<p class="browserupgrade">您的浏览器 <strong>太旧啦！</strong> 详情参考“关于我的博客”一栏</p>
+	<![endif]-->
+<!-- preloader area start -->
+<!---<div id="preloader">
+	<div class="loader"></div>
+</div>--->
+<!-- prealoader area end -->
+<!-- header area start -->
+<header>
+	<div class="header-area tpheader-two">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../assets/images/icon/logo-white.png" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 d-none d-lg-block">
+					<div class="main-menu">
+						<nav id="nav_mobile_menu">
+							<ul id="navigation">
+								<li class="active">
+									<a href="../index.html">主页</a>
+								</li>
+								<li>
+									<a href="../categories/about.html">关于我的博客</a>
+								</li>
+								<li>
+									<a href="../categories/music.html">音乐推荐</a>
+								</li>
+								<li>
+									<a href="../categories/games.html">游戏</a>
+								</li>
+								<li>
+									<a href="../categories/linux.html">Linux使用心得</a>
+								</li>
+								<li>
+									<a href="../categories/web.html">web开发笔记</a>
+								</li>
+								<li>
+									<a href="../categories/feeling.html">随想</a>
+								</li>
+								<li>
+									<a href="../categories/hardware.html">硬件拾遗</a>
+								</li>
+								<li>
+									<a href="../categories/software.html">好玩的软件</a>
+								</li>
+								<li>
+									<a href="../categories/log.html">开发日志</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-12 d-block d-lg-none">
+					<div id="mobile_menu"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="abt3-area ptb--100" id="about">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-lg-7">
+				<div class="abt3-content">
+                    <span><a href="../categories/software.html">回到刚才的页面</a></span>
+					<h2>浏览器无法上网的解决问题——基于DNS的解决方案</h2>
+					<p>昨天一个邻居打电话，说电脑除了浏览器其他都能正常上网，感觉很奇怪，遂下楼查看。</p>
+                    <p>经过检查，驱动无异常，宽带无欠费，其他同一网络下设备也能正常上网。想尝试重启大法时看到win10要求更新，遂心生欢喜，以为救星来临。更新后却404依旧，懊恼不已</p>
+                    <p>突然想到：修改DNS兴许可以解决这个问题。打开控制面板-网络与INTERNET-网络和共享中心-更改适配器设置，选择当前使用的网卡，右键属性-TCP/IPV4-属性-使用下方的DNS服务器，把dns分别改为了114.114.114.114和114.114.114.115,问题解决。</p>
+                    <p>何为dns？</p>
+					<p>DNS是域名系统，DNS就是把域名解析为IP地址，提供我们上网。以下是推荐的几款dns：</p>
+					<p>
+						<table border="5">
+							<tr>
+								<td>dns服务商</td>
+								<td>主力</td>
+								<td>备用</td>
+							</tr>
+							<tr>
+								<td>114</td>
+								<td>114.114.114.114</td>
+								<td>114.114.115.115</td>
+							</tr>
+							<tr>
+								<td>阿里</td>
+								<td>223.5.5.5</td>
+								<td>223.6.6.6</td>
+							</tr>
+							<tr>
+								<td>百度</td>
+								<td>180.76.76.76</td>
+							</tr>
+							<tr>
+								<td>GOOGLE</td>
+								<td>8.8.8.8</td>
+								<td>8.8.4.4</td>
+							</tr>
+							<tr>
+								<td>腾讯</td>
+								<td>119.29.29.29</td>
+								<td>182.254.116.116</td>
+							</tr>
+							<tr>
+								<td>中科大</td>
+								<td>202.38.93.153</td>
+								<td>202.141.162.123</td>
+							</tr>
+						</table>
+						<p>
+							经过了一周的休息，博主渐渐从新冠中恢复，往后就是2023辣！
+						</p>
+					</p>
+				</div>
+			</div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                <p>******</p>
+                <p>2022.12.26 今日音乐：</p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=26165023&auto=0&height=66"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footer-area ptb--50">
+	<div class="container">
+		<div class="footer-content">
+			<p>SINCE 2022 2.0 Cone</p>
+		</div>
+	</div>
+</div>
+<!-- jquery latest version -->
+<script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- others plugins -->
+<script src="../assets/js/jquery.slicknav.min.js"></script>
+<script src="../assets/js/counterup.min.js"></script>
+<script src="../assets/js/waypoints.js"></script>
+<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/isotope.pkgd.min.js"></script>
+<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/countdown.js"></script>
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/jquery.zoomslider.min.js"></script>
+<script src="../assets/js/jquery.firefly.js"></script>
+<script src="../assets/js/scripts.js"></script>
+</body>
+</body>
+</html>

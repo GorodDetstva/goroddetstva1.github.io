@@ -1,0 +1,103 @@
+#steam,#msfy{
+    float:left;
+    width:250px;
+    height:120px;
+    margin-bottom:8px;
+    background-position:center;
+    background-repeat: no-repeat;
+    }
+#myblog,#class,#gf,#cx,#ty,#db,#msdn,#weibo,#bt,#lib{
+    float:left;
+    width:120px;
+    height:120px;
+    margin-bottom:8px;
+    background-position:center;
+    background-repeat: no-repeat;
+    }
+#sys:hover,#steam:hover,#jwc:hover,#msfy:hover,#lib:hover{
+    border:3px solid rgb(43,6,128);
+    margin-top:-3px;
+    margin-right:-3px;
+    margin-left:-3px;
+    margin-bottom:5px;
+    }
+#right{
+    float:left;
+    width:250px;
+    height:504px;
+    margin-left:56px;
+    }
+#sys{
+    float:left;
+    width:250px;
+    height:248px;
+    margin-bottom:8px;
+    background: url(https://tse3-mm.cn.bing.net/th/id/OIP-C.WaE6NkLfXmPJH-bcOGTq_AAAAA?rs=1&pid=ImgDetMain);
+    background-position: center;
+    }
+#steam{
+    margin-bottom:8px;
+    background: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.077xKVfO_sXigbK0gsGt3QHaCh?rs=1&pid=ImgDetMain);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    }
+#class{
+    background-color:rgb(163,0,170);
+    }
+#myblog{
+    margin-left:10px;
+    background: url(https://ts1.cn.mm.bing.net/th/id/R-C.8b1d1134a39d997b21f3cb10c7a20d77?rik=LsKQDTo0mpCy%2fA&riu=http%3a%2f%2fp9.qhimg.com%2ft01042bc9cc1c36616a.png&ehk=WHUFNWo%2bT6zo8U3tno6JzuQM1A%2bit8B07Bg6LBXJ%2boU%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);
+    background-position: center;
+    color:white;
+    }
+#myblog:hover{
+    border:3px solid rgb(43,6,128);
+    margin-top:-3px;
+    margin-right:-3px;
+    margin-left:7px;
+    margin-bottom:5px;
+    }
+#gf{
+    background: url(https://pdacdn.com/app/624005656c243/github.png);
+    margin-left:8px;
+    background-position: center;
+    }
+#cx{
+    background: url(https://cdn.lo4d.com/t/icon/128/bitwarden.png);
+    background-color: rgb(35, 35, 235);
+    margin-left:8px;
+    }
+#ty{
+    background: url(https://tse1-mm.cn.bing.net/th/id/OIP-C.SDehBNjp6nXgKArcw34F9AAAAA?rs=1&pid=ImgDetMain);
+    background-position: center;
+    margin-left:8px;
+    }
+#db{
+    background: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.qs-FeSCvs5SZVE9kh9excAAAAA?rs=1&pid=ImgDetMain);
+    background-position: center;
+    margin-left:8px;
+    }
+#msdn{
+    background: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.1JQAtZr0BdFHIAnvWTFe7gAAAA?rs=1&pid=ImgDetMain);
+    margin-left:8px;
+    }
+#weibo{
+    background: url(https://ts1.cn.mm.bing.net/th/id/R-C.53f67651e66a19e988efe12021f470c2?rik=WKRJLBXz8%2fNZpw&riu=http%3a%2f%2fpic.j9p.com%2fup%2f2022-1%2f20221171822188256.png&ehk=QKE%2ft%2bpaqVArKoMVOA7g4t97SV7SirqBmfoPKiSXNF8%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center;
+    margin-left:8px;
+    }
+#bt{
+    background: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.7kvaZyktuIFijpoDU84o7gAAAA?rs=1&pid=ImgDetMain);
+    background-position: center;
+    color: black;
+    margin-left:8px;
+    }
+#msfy{
+    background-color: darkcyan;
+    margin-left:8px;
+    }
+#lib{
+    background-color: peru;
+    margin-left:8px;
+    }

@@ -1,0 +1,120 @@
+#left{
+    float:left;
+    width:764px;
+    height:504px;
+    margin-left:120px;
+    }
+#zhihu,#tiktok,#ap,#desk,#github,#linuxcool,#jwc{
+    float:left;
+    width:250px;
+    height:120px;
+    margin-bottom:8px;
+    background-position:center;
+    background-repeat: no-repeat;
+    }
+#zhihu:hover,#gnome:hover,#map:hover,#desk:hover{
+    border:3px solid rgb(43,6,128);
+    margin-top:-3px;
+    margin-right:-3px;
+    margin-left:-3px;
+    margin-bottom:5px;
+    }
+#zhihu{
+        background-color: rgb(99, 98, 98);
+        background-image: url(https://img.icons8.com/?size=100&id=zCHMlcPyLnll&format=png);
+        color: white;
+        }
+#tiktok{
+        margin-left:8px;
+        background: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.9UQUHLW2c4pD7FLAnwIY5QAAAA?rs=1&pid=ImgDetMain);
+        }
+#archlinuxcn,#bdpan,#mail163,#flb,#wxf,#gnome,#mdn,#wiki{
+        float:left;
+        width:120px;
+        height:120px;
+        margin-bottom:8px;
+        background-position:center;
+        background-repeat: no-repeat;
+        }
+#archlinuxcn{
+        margin-left:8px;
+        color: black;
+        background: url(https://ts1.cn.mm.bing.net/th/id/R-C.afdfe9a2996e54f07226e387dc4ce133?rik=GgnaovIExCtoNQ&riu=http%3a%2f%2fdmgl.donghuajinyun.com%2fimg%2fgitea-sm.png&ehk=w1Cj%2fdPXmq3et2kMVEEvN2OdBtCasdwv56AcLfM7jfQ%3d&risl=&pid=ImgRaw&r=0);
+        background-color: white;
+        }
+#bdpan{
+    background: url(https://ts1.cn.mm.bing.net/th/id/R-C.b5aab66fb237a4a78f000974c44a721a?rik=TZ4NXDvKarOFBA&riu=http%3a%2f%2fp0.ssl.qhimg.com%2fd%2flogo%2fcontrol_72.png&ehk=l8XNQNBYLJkxd5bh%2bu5yovCAD94HNfxcuoZNPY4JlWA%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: midnightblue;
+    }
+#mail163{
+    margin-left:10px;
+    background: url(https://tse3-mm.cn.bing.net/th/id/OIP-C.79kPCSFZwHOke9lFK6XxfwAAAA?rs=1&pid=ImgDetMain);
+    }
+    #ap{
+        margin-left:8px;
+        background: url(https://a.fsdn.com/allura/s/photoprism/icon?b2695c761ece0cdb1843032a62a52f8392fed309dac01c7c2b4885ed6be028f2?&w=148);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: black;
+        }
+    #flb{
+        margin-left:8px;
+        background-color:rgb(240, 240, 240);
+        background: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.AWxunkJZxEB7Q8kU4W3zYQAAAA?rs=1&pid=ImgDetMain);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: cornsilk;
+        color: black;
+        font-weight: 800;
+        }
+    #wxf{
+        margin-left:8px;
+        background: url(https://ts1.cn.mm.bing.net/th/id/R-C.b5038c5cd70e1b80b91941e883e64ba7?rik=EY0wUf8J9z7pyQ&riu=http%3a%2f%2fclipart-library.com%2fimg1%2f1351445.jpg&ehk=LtL3bOCjohHCQs54hVP9LMPa69r6ETMVdVTD%2fPduVTA%3d&risl=&pid=ImgRaw&r=0);
+        color: black;
+        font-weight: 800;
+        }
+    #gnome{
+        float:left;
+        width:121px;
+        height:120px;
+        margin-bottom:8px;
+        background: url(https://apps-assets.fit2cloud.com/stable/1panel/flarum/logo.png);
+        background-position: center;
+        background-color: rgb(255, 225, 126);
+        color: black;
+        }
+#mdn{
+    width:121px;
+    height:120px;
+    margin-left:8px;
+    background: url(https://www.dingxiaoying.cn:18888/img/custom/halo.png);
+    background-position: center;
+    color: black;
+}
+#github{
+        float:right;
+        margin-left:8px;
+        background: url(https://tse3-mm.cn.bing.net/th/id/OIP-C.Uh-_cZA4ocZJWO2pXmEusgHaE1?rs=1&pid=ImgDetMain);
+        }
+#linuxcool{
+        float:right;
+        margin-left:8px;
+        background: url(https://tse2-mm.cn.bing.net/th/id/OIP-C.DYbaRGUNYuDG7ivK9jm9uQHaEK?rs=1&pid=ImgDetMain);
+        background-position: center;
+        }
+#jwc{
+    background: url(https://ts1.cn.mm.bing.net/th/id/R-C.ec08f08367b7f58af849979b95878e8d?rik=F3GJHADTqvIL%2bA&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20171219%2f5ef98bcadcfe468b88cbfb0989e73a7c.jpeg&ehk=%2brffKbv5ADi9e7GLCtKUzyaexqj6HuyHTMyh8JkF2Sw%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center;
+    }
+#wiki{
+    margin-left:8px;
+        background-color:rgb(240, 240, 240);
+        background: url(https://ts1.cn.mm.bing.net/th/id/R-C.9fb0faa5ede7706708813c9ca66ee9e3?rik=3oJ6WypuKlPD1w&riu=http%3a%2f%2fwww.normansblog.de%2fwp-content%2fuploads%2f2009%2f08%2fWiki.png&ehk=szDOUEW6Kgl6AG0hP2bpfjbubjbE9oDfdkT3uSQaGr4%3d&risl=&pid=ImgRaw&r=0);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: cornsilk;
+        color: black;
+        font-weight: 800;
+}

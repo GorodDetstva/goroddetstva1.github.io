@@ -1,0 +1,88 @@
+#left{
+    float:left;
+    width:764px;
+    height:504px;
+    margin-left:120px;
+    }
+#zhihu,#tiktok,#ap,#desk,#github,#linuxcool,#jwc{
+    float:left;
+    width:250px;
+    height:120px;
+    margin-bottom:8px;
+    background-position:center;
+    background-repeat: no-repeat;
+    }
+#zhihu:hover,#gnome:hover,#map:hover,#desk:hover{
+    border:3px solid rgb(43,6,128);
+    margin-top:-3px;
+    margin-right:-3px;
+    margin-left:-3px;
+    margin-bottom:5px;
+    }
+#zhihu{
+        background-color: blanchedalmond;
+        background-image: url(https://img.icons8.com/?size=100&id=zCHMlcPyLnll&format=png);
+        color: black;
+        }
+#tiktok{
+        margin-left:8px;
+        background-color:rgb(88,55,179);
+        }
+#archlinuxcn,#bdpan,#mail163,#flb,#wxf,#gnome,#mdn{
+        float:left;
+        width:120px;
+        height:120px;
+        margin-bottom:8px;
+        background-position:center;
+        background-repeat: no-repeat;
+        }
+#archlinuxcn{
+        margin-left:8px;
+        background-color:rgb(0,154,172);
+        background-image:url(images/photo.png);
+        }
+#bdpan{
+    background-color:rgb(27, 130, 159);
+    }
+#mail163{
+    margin-left:10px;
+    background-color:rgb(217, 44, 44);
+    }
+    #ap{
+        margin-left:8px;
+        background-color:rgb(67, 67, 246);
+        }
+    #flb{
+        margin-left:8px;
+        background-color:rgb(45,136,239);
+        }
+    #wxf{
+        margin-left:8px;
+        background-color:rgb(45, 117, 27);
+        }
+    #gnome{
+        float:left;
+        width:121px;
+        height:120px;
+        margin-bottom:8px;
+        background-color:rgb(0, 0, 0);
+        }
+#mdn{
+    width:121px;
+    height:120px;
+    margin-left:8px;
+    background-color:rgb(2, 46, 103);
+    }
+#github{
+        float:right;
+        margin-left:8px;
+        background-color:rgb(99,62,190);
+        }
+#linuxcool{
+        float:right;
+        margin-left:8px;
+        background-color:rgb(180,27,67);
+        }
+#jwc{
+    background-color: rgb(151, 133, 41);
+    }
